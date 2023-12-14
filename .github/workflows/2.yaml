@@ -29,4 +29,20 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-    - run: echo hi3333333333333
+    - name: Create annotation for build error
+      run: echo "::error file=app.js,line=1::Missing semicolon"
+    - run: echo "::debug::Set the Octocat variable"
+    - run: echo "::warning file=app.js,line=1,col=5,endColumn=7::Missing semicolon"
+
+    - run: echo "::error file=app.js,line=1,col=5,endColumn=7::Missing semicolon"
+    - name: Group of log lines
+      run: |
+            echo "::group::My title"
+            echo "Inside group"
+            echo "::endgroup::"      
+    - run: echo "::notice file=app.js,line=1,col=5,endColumn=7::Missing semicolon"
+    - run: echo "::add-mask::Mona The Octocat"
+    - run: echo "### Hello world! :rocket:" >> $GITHUB_STEP_SUMMARY
+
+
+
