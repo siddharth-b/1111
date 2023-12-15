@@ -26,23 +26,16 @@ on:
   push:
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
+  test1:
+    runs-on: ubuntu-18.04
     steps:
-    - name: Create annotation for build error
-      run: echo "::error file=app.js,line=1::Missing semicolon"
-    - run: echo "::debug::Set the Octocat variable"
-    - run: echo "::warning file=app.js,line=1,col=5,endColumn=7::Missing semicolon"
+    - run : echo Create annotation for build error
+  
+  test2:
+    runs-on: ubuntu-18.04
+    steps:
+      - run: exit 1
 
-    - run: echo "::error file=app.js,line=1,col=5,endColumn=7::Missing semicolon"
-    - name: Group of log lines
-      run: |
-            echo "::group::My title"
-            echo "Inside group"
-            echo "::endgroup::"      
-    - run: echo "::notice file=app.js,line=1,col=5,endColumn=7::Missing semicolon"
-    - run: echo "::add-mask::Mona The Octocat"
-    - run: echo "### Hello world! :rocket:" >> $GITHUB_STEP_SUMMARY
 
 
 
