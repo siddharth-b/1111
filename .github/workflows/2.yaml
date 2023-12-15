@@ -27,12 +27,12 @@ on:
 
 jobs:
   test1:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps:
     - run : echo Create annotation for build error
   
   test2:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps:
       - run: exit 1
 
