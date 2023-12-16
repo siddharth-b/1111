@@ -50,5 +50,5 @@ jobs:
   test5:
     runs-on: ubuntu-latest
     steps:
-      - run: echo 5
+      - run: sleep 20
 
