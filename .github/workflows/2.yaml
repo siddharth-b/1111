@@ -19,6 +19,10 @@ on:
         description: 'Test scenario tags'
         required: true
         type: string
+      tags2222:
+        description: 'Test scenario tags'
+        required: true
+        type: number
       environment:
         description: 'Environment to run tests against'
         type: environment
