@@ -33,5 +33,5 @@ jobs:
   test1:
     runs-on: ubuntu-latest
     steps:
-      - uses: docker://nginx
+      - uses: docker://alpine:3.8
 
